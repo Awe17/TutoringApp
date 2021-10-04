@@ -18,10 +18,11 @@ ConnectDB();
 
 // Initialise express middleware
 app.use(express.json({extended: false}));
-app.use(bookRouter); //book router
+app.use('/api/books',bookRouter); //book router
 
 // Test get router
 app.get('/new',(req,res)=>{
+    
 })
 
 //setup Port

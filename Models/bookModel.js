@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 const {Schema} = require('mongoose');
 
+/**
+ * To do
+ * Create a property to store is available 
+ */
+
 // Create book schema
 const bookSchema = new Schema({
     title: {
@@ -21,6 +26,12 @@ const bookSchema = new Schema({
     publisher:{
         type: String,
         required: false
+    },
+
+    isAvailable:{
+        type: Boolean,
+        default: true,
+        required: false,
     }
 },{timestamps: true})
 

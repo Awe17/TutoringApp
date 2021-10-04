@@ -12,22 +12,20 @@ const bookController = require('../Controllers/bookController');
 
 
 // Get all books
-router.get('/api/books', bookController.getAllBooks)
+router.get('/', bookController.getAllBooks)
+
+// Get all available books
+router.get('/available', (req,res)=>{
+    //to be contd
+})
 
 // Add a new book
-router.post('/api/books', bookController.createBook)
+router.post('/', bookController.createBook)
 
 // Get book by id
-router.get('/api/books/:id', bookController.getBookById)
-
-// Get book by title
-router.get('/api/books/?title',(req,res)=>{
-
-})
+router.get('/:id', bookController.getBookById)
 
 // Delete book by id
-router.delete('/api/books/:id',(req, res)=>{
-
-})
+router.delete('/', bookController.deletebook)
 
 module.exports = router;
