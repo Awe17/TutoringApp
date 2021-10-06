@@ -15,15 +15,19 @@ const bookController = require('../Controllers/bookController');
 router.get('/', bookController.getAllBooks)
 
 // Get all available books
-router.get('/available', (req,res)=>{
-    //to be contd
-})
+router.get('/available',bookController.getAvailableBooks)
+
+// Get a book's status
+router.get('/status', bookController.getStatus);
 
 // Add a new book
 router.post('/', bookController.createBook)
 
 // Get book by id
 router.get('/:id', bookController.getBookById)
+
+//Update available books
+router.patch('/',bookController.updateBook);
 
 // Delete book by id
 router.delete('/', bookController.deletebook)
